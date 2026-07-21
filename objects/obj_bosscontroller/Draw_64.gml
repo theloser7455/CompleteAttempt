@@ -16,7 +16,7 @@ repeat player.maxhp
 		if obj_player.pal_select == 12
 			pattern_draw(player.hpspr, player.hpix, xx, yy, obj_player.pattern_spr)
 		
-		pal_swap_set(pal_peppino, obj_player.pal_select, false)
+		pal_swap_set(obj_player.pal_spr, obj_player.pal_select, false)
 		draw_sprite(player.hpspr, player.hpix, xx, yy)
 		pal_swap_reset()
 		player.hphudpos.x = xx
@@ -72,7 +72,7 @@ if fade_alpha > 0
 		if pal_select == 12
 			pattern_draw(sprite_index, image_index, x, y, pattern_spr, xscale * visual_size, image_yscale * visual_size, image_angle, image_blend, other.player_alpha)
 
-		pal_swap_set(pal_peppino, pal_select, false)
+		pal_swap_set(obj_player.pal_spr, pal_select, false)
 		draw_sprite_ext(sprite_index, image_index, x, y, xscale * visual_size, image_yscale * visual_size, image_angle, image_blend, other.player_alpha)
 		pal_swap_reset()
 	}

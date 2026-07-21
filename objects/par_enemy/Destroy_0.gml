@@ -16,7 +16,7 @@ if do_particles
 	repeat 3
 		particle_create(x, y, particles.yellowstar)
 	fmod_studio_event_instance_oneshot_3d("event:/sfx/misc/kill", x, y)
-	shake_camera(3, 3 / room_speed)
+	shake_camera(3, 3 / game_get_speed(gamespeed_fps))
 	
 	if object_index != obj_pizzaboy
 		ds_list_add(!escape ? global.ds_dead_enemies : global.ds_escapesaveroom, id)

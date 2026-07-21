@@ -15,7 +15,7 @@ with par_enemy
 		sprite_index = sprs.stun
 		alarm[0] = 5
 		do_enemygibs()
-		shake_camera(3, 3 / room_speed)
+		shake_camera(3, 3 / game_get_speed(gamespeed_fps))
 		fmod_studio_event_instance_oneshot_3d("event:/sfx/misc/punch", x, y)
 		particle_create(x, y, particles.parry)
 	}

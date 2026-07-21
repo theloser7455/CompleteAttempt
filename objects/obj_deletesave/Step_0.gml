@@ -37,7 +37,7 @@ if quit_timer >= 120
 	}
 	
 	file_delete(global.savestring)
-	shake_camera(20, 40 / room_speed)
+	shake_camera(20, 40 / game_get_speed(gamespeed_fps))
 	scr_sound(sfx_explosion)
 	scr_sound(sfx_ui_savedeleted)
 	

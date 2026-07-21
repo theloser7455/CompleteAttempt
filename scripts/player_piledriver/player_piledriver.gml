@@ -27,7 +27,7 @@ function player_piledriver()
 		}
 		
 		_pdeffect.statetofollow = noone //kill this effect
-		shake_camera(20, 30 / room_speed)
+		shake_camera(20, 30 / game_get_speed(gamespeed_fps))
 		create_effect(x, y + 2, spr_groundpoundeffect)
 		reset_anim(spr_player_piledriverland)
 		fmod_studio_event_instance_oneshot_3d("event:/sfx/misc/slam", x, y)

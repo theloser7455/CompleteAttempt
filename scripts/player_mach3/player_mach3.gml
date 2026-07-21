@@ -120,7 +120,7 @@ function player_mach3()
 		state = states.bump
 		vsp = -6
 		hsp = xscale * -6
-		shake_camera(20, 40 / room_speed)
+		shake_camera(20, 40 / game_get_speed(gamespeed_fps))
 		reset_anim(spr_player_mach3hitwall)
 		fmod_studio_event_instance_oneshot_3d("event:/sfx/misc/slam", x, y)
 		fmod_studio_event_instance_oneshot_3d("event:/sfx/misc/bump", x, y)

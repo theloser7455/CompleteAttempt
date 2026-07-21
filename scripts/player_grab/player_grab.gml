@@ -35,7 +35,7 @@ function player_grab()
 	if (sprite_index == spr_player_suplexdash && !grounded)
 		reset_anim(spr_player_suplexgrabjump)
 	
-	if (grounded && sprite_index == spr_player_suplexgrabjump_loop)
+	if (grounded && sprite_index == spr_player_suplexgrabjump_loop || grounded && sprite_index == spr_player_suplexgrabjump)
 	{
 		if input_check(INPUTS.dash)
 		{

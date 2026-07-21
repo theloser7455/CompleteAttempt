@@ -103,7 +103,7 @@ function player_groundpound()
 			state = states.bump
 			hsp = 0
 			movespeed = 0
-			shake_camera(5, 15 / room_speed)
+			shake_camera(5, 15 / game_get_speed(gamespeed_fps))
 			fmod_studio_event_instance_oneshot_3d("event:/sfx/misc/slam", x, y)
 			create_effect(x, y + 2, spr_groundpoundeffect)
 			if freefallsmash >= 10
@@ -119,7 +119,7 @@ function player_groundpound()
 						hsp = 0
 					}
 				}
-				shake_camera(10, 30 / room_speed)
+				shake_camera(10, 30 / game_get_speed(gamespeed_fps))
 			}
 		}
 	}

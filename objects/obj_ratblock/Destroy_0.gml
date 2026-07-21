@@ -13,7 +13,7 @@ if ds_list_find_index(global.ds_saveroom, id) == -1
 		particle_create(x1, y1, particles.stars)
 	particle_create(x1, y1, particles.bang)
 	
-	shake_camera(3, 3 / room_speed)
+	shake_camera(3, 3 / game_get_speed(gamespeed_fps))
 	fmod_studio_event_instance_oneshot_3d("event:/sfx/misc/ratdead", x, y)
 	ds_list_add(global.ds_saveroom, id)
 }

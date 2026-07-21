@@ -18,7 +18,7 @@ function player_backtohub()
                 vsp = -14
                 particle_create(x, y + 39, particles.bang)
                 image_index = 0
-                shake_camera(3, 5 / room_speed)
+                shake_camera(3, 5 / game_get_speed(gamespeed_fps))
             }
         }
     }

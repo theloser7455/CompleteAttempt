@@ -71,7 +71,7 @@ function player_hold()
 		input_buffers.grab = 0
 		state = states.punchenemy
 		var str = $"spr_player_finishingblow{string(irandom_range(1, 5))}"
-		reset_anim(asset_get_index(str))
+		reset_anim(variable_instance_get(self, str))
 		if (input_direction_check(INPUTS.up))
 			reset_anim(spr_player_uppercutfinishingblow)
 	}

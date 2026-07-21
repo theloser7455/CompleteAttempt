@@ -5,11 +5,11 @@ function player_taunt()
 	
 	var endtaunt = false
 	
-	if !string_starts_with(sprite_get_name(sprite_index), "spr_player_supertaunt")
+	if !string_contains("supertaunt", sprite_get_name(sprite_index))
 	{
 		if input_direction_check(INPUTS.up) && supertauntshow
 		{
-			reset_anim(asset_get_index($"spr_player_supertaunt{irandom_range(1, 4)}"))
+            reset_anim(variable_instance_get(self, $"spr_player_supertaunt{irandom_range(1, 4)}"))
 			fmod_studio_event_instance_oneshot_3d("event:/sfx/player/supertaunt", x, y)
 			var spds = [[0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0], [-1, -1]]
 			var i = 0
@@ -35,7 +35,7 @@ function player_taunt()
 	{
 		supertauntcount = 0
 		supertauntshow = false
-		shake_camera(4, 5 / room_speed)
+		shake_camera(4, 5 / game_get_speed(gamespeed_fps))
 		image_speed = 0.4
 		
 		if anim_ended()

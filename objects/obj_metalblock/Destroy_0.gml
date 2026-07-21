@@ -12,7 +12,7 @@ if (ds_list_find_index(global.ds_saveroom, id) == -1)
     }
     sleep(5)
     particle_create(x + 32, y + 32, particles.bang)
-	shake_camera(20, 40 / room_speed)
+	shake_camera(20, 40 / game_get_speed(gamespeed_fps))
     fmod_studio_event_instance_oneshot_3d("event:/sfx/misc/breakmetal", x, y)
     ds_list_add(global.ds_saveroom, id)
 }

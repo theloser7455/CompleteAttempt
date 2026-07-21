@@ -18,7 +18,7 @@ if input_direction_check_pressed(INPUTS.up)
 			dopalette = true
             hsp = irandom_range(-5, 5)
             vsp = irandom_range(-6, -11)
-			sprite_index = spr_palettedresserdebris
+			sprite_index = spr_palettedresserdebrisP
 			depth = -400
 		}
 		

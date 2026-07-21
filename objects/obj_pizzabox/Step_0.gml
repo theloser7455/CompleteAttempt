@@ -15,7 +15,7 @@ with instance_place(x, y - (image_yscale * 16), obj_player)
 			vsp = 0
 			movespeed = 0
 			image_speed = 0.35
-			reset_anim(spr_player_downpizzabox)
+			reset_anim(obj_player.spr_player_downpizzabox)
 			fmod_studio_event_instance_oneshot_3d("event:/sfx/misc/box", other.x, other.y)
 		}
 		else if ((input_direction_check(INPUTS.up) || state == states.superjump || state == states.climbwall) && place_meeting(x, y - 10, other) && other.image_yscale == -1)
@@ -29,12 +29,12 @@ with instance_place(x, y - (image_yscale * 16), obj_player)
 			movespeed = 0
 			y = other.bbox_bottom - 8
 			image_speed = 0.35
-			reset_anim(spr_player_uppizzabox)
+			reset_anim(obj_player.spr_player_uppizzabox)
 			fmod_studio_event_instance_oneshot_3d("event:/sfx/misc/box", other.x, other.y)
 		}
 	}
 	
-	if (sprite_index == spr_player_uppizzabox || sprite_index == spr_player_downpizzabox)
+	if (sprite_index == obj_player.spr_player_uppizzabox || sprite_index == obj_player.spr_player_downpizzabox)
 	{
 		hsp = 0
 		x = other.x + 32
@@ -47,4 +47,4 @@ with instance_place(x, y - (image_yscale * 16), obj_player)
 	}
 }
 
-depth = (obj_player.sprite_index == spr_player_uppizzabox || obj_player.sprite_index == spr_player_downpizzabox) ? -10 : 50
+depth = (obj_player.sprite_index == obj_player.spr_player_uppizzabox || obj_player.sprite_index == obj_player.spr_player_downpizzabox) ? -10 : 50

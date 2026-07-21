@@ -32,7 +32,7 @@ function pattern_draw(_spr, _ix, _x, _y, _pattern_spr, _xscale = 1, _yscale = 1,
 	//Draw mask
 	gpu_set_colorwriteenable(false, false, false, false)
 	
-	pattern_set_colors(pal_peppatterncolors)
+	pattern_set_colors(pal_playerpatterncolorsP)
 	draw_sprite_ext(_spr, _ix, _x, _y, _xscale, _yscale, _rot, _col, _alpha)
 	shader_reset()
 	

@@ -1,4 +1,4 @@
-shake_camera(2, 3 / room_speed)
+shake_camera(2, 3 / game_get_speed(gamespeed_fps))
 fmod_studio_event_instance_oneshot_3d("event:/sfx/misc/killingblow", screen_w / 2, screen_h / 2)
 
 results[result_ix][2] = true

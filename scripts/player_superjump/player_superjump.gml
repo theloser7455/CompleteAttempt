@@ -82,7 +82,7 @@ function player_superjump()
 		if scr_solid(x, y - 1)
 		{
 			state = states.bump
-			shake_camera(10, 30 / room_speed)
+			shake_camera(10, 30 / game_get_speed(gamespeed_fps))
 			reset_anim(spr_player_ceilinghit)
 			fmod_studio_event_instance_oneshot_3d("event:/sfx/misc/slam", x, y)
 		}

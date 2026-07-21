@@ -57,7 +57,7 @@ function quick_shader_set_uniform_f(shader, uniform_name, val)
 	shader_set_uniform_f(f, val)
 }
 
-function shake_camera(_mag = 3, _mag_decel = 3 / room_speed)
+function shake_camera(_mag = 3, _mag_decel = 3 / game_get_speed(gamespeed_fps))
 {
 	obj_camera.mag = _mag
 	obj_camera.mag_decel = _mag_decel

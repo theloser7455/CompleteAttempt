@@ -14,7 +14,7 @@ if state == 0
 if (state != 0 && state < 3)
 {
 	pattern_draw(sprite_index, image_index, x, y, obj_player.pattern_spr)
-	pal_swap_set(pal_peppino, obj_player.pal_select, false)
+	pal_swap_set(obj_player.pal_spr, obj_player.pal_select, false)
 	draw_self()
 	pal_swap_reset()
 }

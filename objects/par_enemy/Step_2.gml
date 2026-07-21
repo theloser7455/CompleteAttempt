@@ -69,7 +69,7 @@ if follow_player
 		if state == states.punchenemy && floor(image_index) >= ixcheck && other.state != states.hit
 		{
 			vsp = -6
-			shake_camera(3, 3 / room_speed)
+			shake_camera(3, 3 / game_get_speed(gamespeed_fps))
 			fmod_studio_event_instance_oneshot_3d("event:/sfx/misc/punch", x, y)
 			fmod_studio_event_instance_oneshot_3d("event:/sfx/misc/killingblow", x, y)
 			with other
@@ -79,7 +79,7 @@ if follow_player
 				state = states.hit
 				hsp = other.xscale * 25
 				vsp = 0
-				if other.sprite_index == spr_player_uppercutfinishingblow
+				if other.sprite_index == obj_player.spr_player_uppercutfinishingblow
 				{
 					hsp = 0
 					vsp = -25

@@ -7,6 +7,14 @@
 
 collide_init()
 
+
+enum CHARACTERS
+{
+	PEP,
+	OTHER
+}
+
+
 #region Player States
 
 player_states = [];
@@ -45,6 +53,12 @@ player_states[states.slip] = player_slip;
 
 #endregion
 
+character = CHARACTERS.PEP
+character = "P"
+pal_spr = pal_playerP
+pattern_colors = pal_playerpatterncolorsP
+charletter = "P"
+asset_player_reset(charletter)
 spawn = "a"
 door_type = fade_types.none
 wasclimbingwall = false
